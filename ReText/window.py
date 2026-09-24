@@ -166,7 +166,7 @@ class ReTextWindow(QMainWindow):
             trig=self.showEncodingDialog)
         self.actionSetEncoding.setEnabled(False)
         self.actionReload = self.act(self.tr('Reload'), 'view-refresh',
-            lambda: self.currentTab.readTextFromFile())
+            lambda: self.currentTab.readTextFromFile(), shct=QKeySequence.StandardKey.Refresh)
         self.actionReload.setEnabled(False)
         self.actionCopyFilePath = self.act(self.tr('Copy file path'), 'edit-copy',
             self.copyFilePath)
